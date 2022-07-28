@@ -73,10 +73,10 @@ const Withdraw = ({ navigation, route }) => {
                                     money: money
                                 }).then((res) => {
                                     if (!res.data.balance_less) {
-                                        Alert.alert("Withdraw")
+                                        Alert.alert("กู้เงินสำเร็จ")
                                         navigation.navigate("HOME")
                                     } else {
-                                        Alert.alert("Share money hasn't enough")
+                                        Alert.alert("เงินกองกลางมีไม่พอ")
                                     }
                                 })
                             }}, {text: 'ยกเลิก', onPress:()=>{

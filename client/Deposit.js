@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux'
 const Deposit = ({ navigation, route }) => {
 
 
-    let phone_number = route.params.phone_number
+    // let phone_number = route.params.phone_number
 
     // console.log(phone_number)
 
@@ -34,7 +34,7 @@ const Deposit = ({ navigation, route }) => {
 
     const DepositMethod = () => {
         axios.post("http://play2api.ddns.net:3001/deposit", {
-            phone_number: phone_number,
+            phone_number: user,
             money: money
         }).then((res) => {
             if (res.data.deposit_success) {
