@@ -39,7 +39,7 @@ const Deposit = ({ navigation, route }) => {
         }).then((res) => {
             if (res.data.deposit_success) {
                 Alert.alert("นำเงินเข้าสู่กองกลางสำเร็จ")
-                socket.emit("message_deposit", { user: user[0].name })
+                // socket.emit("message_deposit", { user: user[0].first_name })
                 navigation.navigate("HOME")
             }
         })

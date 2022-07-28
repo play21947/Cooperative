@@ -23,10 +23,10 @@ const SignIn = ({ navigation }) => {
             <Text style={{ fontFamily: 'Kanit-Regular', color: 'gray', marginBottom: 20 }}>created by Rattanon Boonmata</Text>
             <TextInput keyboardType='number-pad' onChangeText={(text) => {
                 setPhone_number(text)
-            }} style={{ fontFamily: 'Kanit-Regular', borderWidth: 1, borderColor: 'gray', borderRadius: 4, fontSize: 15 }} placeholder='0987654321'></TextInput>
-            <TextInput style={{ borderColor: 'gray', borderWidth: 1, marginTop: 10, borderRadius: 4, marginBottom: 10, fontSize: 15 }} secureTextEntry={true} onChangeText={(text) => {
+            }} style={{ fontFamily: 'Kanit-Regular', borderWidth: 1, borderColor: 'gray', borderRadius: 4, fontSize: 15, color: 'black' }} placeholder='0987654321' placeholderTextColor={'gray'}></TextInput>
+            <TextInput style={{ borderColor: 'gray', borderWidth: 1, marginTop: 10, borderRadius: 4, marginBottom: 10, fontSize: 15, color: 'black' }} secureTextEntry={true} onChangeText={(text) => {
                 setPassword(text)
-            }} placeholder='******'></TextInput>
+            }} placeholder='******' placeholderTextColor={'gray'}></TextInput>
             <TouchableOpacity style={{ backgroundColor: 'lightblue', height: 60, display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: 5 }} onPress={() => {
                 if (phone_number && password) {
                     dispatch(LoginAction(phone_number, password))

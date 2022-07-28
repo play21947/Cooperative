@@ -42,12 +42,15 @@ io.on('connection', (socket) => {
         })
     }, 2000)
 
-    socket.on("message_deposit", (user) => {
-        socket.broadcast.emit("message_deposit_rec", user)
-    })
+    // If You want to send message when someone Deposit money open below this
+
+    // socket.on("message_deposit", (user) => {
+    //     socket.broadcast.emit("message_deposit_rec", user)
+    // })
 
     socket.on('disconnect', () => {
         console.log(socket.id + " disconnect")
+        // console.log(socket.connected)
     })
 })
 

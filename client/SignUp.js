@@ -45,14 +45,14 @@ const SignUp = ({ navigation }) => {
                 <Text style={{ color: 'gray', fontFamily: 'Kanit-Regular' }}>เบอร์โทรศัพท์</Text>
                 <TextInput onChangeText={(text) => {
                     setPhoneNumber(text)
-                }} style={{ borderWidth: 1, borderColor: 'gray', borderRadius: 4 }}></TextInput>
+                }} style={{ borderWidth: 1, borderColor: 'gray', borderRadius: 4, color: 'black' }}></TextInput>
             </View>
 
             <View style={{ marginBottom: 10 }}>
                 <Text style={{ color: 'gray', fontFamily: 'Kanit-Regular' }}>รหัสผ่าน</Text>
                 <TextInput onChangeText={(text) => {
                     setPassword(text)
-                }} secureTextEntry={true} style={{ borderWidth: 1, borderColor: 'gray', borderRadius: 4 }}></TextInput>
+                }} secureTextEntry={true} style={{ borderWidth: 1, borderColor: 'gray', borderRadius: 4 , color: 'black'}}></TextInput>
             </View>
 
             <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '100%', marginBottom: 15 }}>
@@ -61,14 +61,14 @@ const SignUp = ({ navigation }) => {
                     <Text style={{ fontFamily: "Kanit-Regular", color: 'gray' }}>ชื่อ</Text>
                     <TextInput onChangeText={(text) => {
                         setFirstName(text)
-                    }} style={{ borderWidth: 1, borderRadius: 4, borderColor: 'gray', width: '100%' }}></TextInput>
+                    }} style={{ borderWidth: 1, borderRadius: 4, borderColor: 'gray', width: '100%', color: 'black' }}></TextInput>
                 </View>
 
                 <View style={{ width: '46%' }}>
                     <Text style={{ fontFamily: "Kanit-Regular", color: 'gray' }}>นามสกุล</Text>
                     <TextInput onChangeText={(text) => {
                         setLastName(text)
-                    }} style={{ borderWidth: 1, borderRadius: 4, borderColor: 'gray', width: '100%' }}></TextInput>
+                    }} style={{ borderWidth: 1, borderRadius: 4, borderColor: 'gray', width: '100%', color: 'black' }}></TextInput>
                 </View>
             </View>
 

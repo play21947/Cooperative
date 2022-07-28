@@ -134,6 +134,8 @@ const Home = ({ navigation }) => {
     }
 
     useEffect(() => {
+        
+        socket.connect()
 
         socket.on("all_money", (money) => {
             setBalance(money[0].balance)

@@ -3,13 +3,19 @@ import { View, Text, TouchableOpacity } from 'react-native'
 import axios from 'axios'
 import { Logout } from './actions/AuthenticationActions'
 import { useDispatch } from 'react-redux'
+import { socket } from './service/socket'
+import { useSelector } from 'react-redux'
 
 
-const Account = ({ navigation, route }) => {
+const Account = ({ navigation }) => {
+
+    let phone_number = useSelector((state)=>{
+        return state.auth.user
+    })
 
     let dispatch = useDispatch()
 
-    let phone_number = route.params.phone_number
+    // let phone_number = route.params.phone_number
 
     let [loaner, setLoaner] = useState([])
     let [user, setUser] = useState([])
@@ -75,6 +81,7 @@ const Account = ({ navigation, route }) => {
 
             <TouchableOpacity onPress={() => {
                 dispatch(Logout())
+                socket.disconnect()
             }} style={{ backgroundColor: 'firebrick', borderRadius: 8, width: 200, height: 60, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <Text style={{ fontFamily: 'Kanit-Regular', fontSize: 22, color: 'white' }}>ออกจากระบบ</Text>
             </TouchableOpacity>
